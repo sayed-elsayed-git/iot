@@ -1,0 +1,870 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Packet Tracer - Explore the Smart Home</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Webdings;
+	panose-1:5 3 1 2 1 5 9 6 7 3;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Arial",sans-serif;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	page-break-after:avoid;
+	font-size:3.0pt;
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:normal;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0in;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0in;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.PageHead, li.PageHead, div.PageHead
+	{mso-style-name:"Page Head";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:115%;
+	border:none;
+	padding:0in;
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.AnswerLineL50, li.AnswerLineL50, div.AnswerLineL50
+	{mso-style-name:"Answer Line L50";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.5in;
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;
+	font-style:italic;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+p.ConfigWindow, li.ConfigWindow, div.ConfigWindow
+	{mso-style-name:"Config Window";
+	margin:0in;
+	font-size:3.0pt;
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-style:italic;}
+p.SubStepAlpha, li.SubStepAlpha, div.SubStepAlpha
+	{mso-style-name:"SubStep Alpha";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.5in;
+	text-indent:-.25in;
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;}
+p.BodyTextL50, li.BodyTextL50, div.BodyTextL50
+	{mso-style-name:"Body Text L50";
+	mso-style-link:"Body Text L50 Char";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.5in;
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;}
+p.BodyTextL25, li.BodyTextL25, div.BodyTextL25
+	{mso-style-name:"Body Text L25";
+	mso-style-link:"Body Text L25 Char";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;}
+span.LabTitleInstVersred
+	{mso-style-name:"Lab Title Inst Vers \(red\)";
+	font-family:"Arial",sans-serif;
+	color:#EE0000;
+	font-weight:bold;}
+p.SubStepNum, li.SubStepNum, div.SubStepNum
+	{mso-style-name:"SubStep Num";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;}
+p.BodyTextL25Bold, li.BodyTextL25Bold, div.BodyTextL25Bold
+	{mso-style-name:"Body Text L25 Bold";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	color:white;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:SimSun;
+	font-weight:bold;}
+span.BodyTextL25Char
+	{mso-style-name:"Body Text L25 Char";
+	mso-style-link:"Body Text L25";}
+span.BodyTextL50Char
+	{mso-style-name:"Body Text L50 Char";
+	mso-style-link:"Body Text L50";}
+span.AnswerGray
+	{mso-style-name:"Answer Gray";
+	font-family:"Arial",sans-serif;
+	border:none;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-size: 11.5pt;
+	font-family:"Arial",sans-serif;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:76.3pt .75in .9in .75in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+
+
+	.AnswerGray{
+	padding: 0.2rem;
+}
+
+.question-action-container{
+	margin-top: 6pt;
+    margin-right: 0in;
+    margin-bottom: 6pt;
+    margin-left: 0.5in;
+}
+
+.show-answer, .hide-answer {
+	padding: 0.5rem 1rem;
+	background-color: #00bceb;
+	color: #fff;
+	border: 0px;
+	cursor: pointer;
+	font-size: 11.5pt;
+}
+
+.global-action-container {
+	display: flex;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.global-action-container .btn__action {
+	margin: 10px;
+}
+.btn__container button.btn__action:not(.is-full-width) {
+	width: calc(50% - .5%);
+}
+.btn-text {
+	border: 0px;
+	padding: 0.5rem 1rem;
+	background-color: #6abf4b;
+	color: #fff;
+	border-radius: 0;
+	cursor: pointer;
+	font-size: 11.5pt;
+}
+
+.hidden{
+	display: none;
+}
+.dark-theme {
+        color: #fff;
+      }
+      .dark-theme .dark-color {
+        color: #fff !important;
+      }
+      .dark-theme p.ConfigWindow,
+      .dark-theme li.ConfigWindow,
+      .dark-theme div.ConfigWindow {
+        mso-style-name: "Config Window";
+        color: #212328;
+      }
+      .dark-theme h4 {
+        color: #212328;
+      }
+      .dark-theme .MsoTitle span {
+        color: #fff !important;
+      }
+      .dark-theme textarea {
+        background-color: #212328;
+        color: #fff;
+      }
+      .dark-theme .BodyTextL25Answer {
+        background-color: #000;
+        color: #fff;
+      }
+      .dark-theme .BodyTextL25Answer > span {
+        padding: 4px;
+      }
+      .dark-theme .BodyTextL25Answer span {
+        color: #fff;
+      }
+      .dark-theme table tbody tr td {
+        color: #fff !important;
+      }
+      .dark-theme table .TableHeading {
+        color: #000;
+      }
+	  p.BodyTextL50Answer,
+	li.BodyTextL50Answer,
+	div.BodyTextL50Answer {
+		mso-style-name: "Body Text L50 Answer";
+		mso-style-link: "Body Text L50 Answer Char";
+		margin-top: 6.0pt;
+		margin-right: 0in;
+		margin-bottom: 6.0pt;
+		margin-left: .5in;
+		background: #D9D9D9;
+		font-size: 10.0pt;
+		font-family: "Arial", sans-serif;
+		font-weight: bold;
+	}
+	.dark-theme .BodyTextL50Answer {
+        background-color: #000;
+        color: #fff;
+    }
+
+</style>
+
+</head>
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoTitle><span style='color:#EE0000;font-weight:normal'><b><span
+style='color:windowtext'>Packet Tracer - Explore the Smart Home</span></b></span></p>
+
+<h1>Objectives</h1>
+
+<p class=BodyTextL25Bold><a name="_Hlk90968092">Part 1: Explore the Smart Home</a></p>
+
+<p class=BodyTextL25Bold>Part 2: Edge Computing in the Smart Home</p>
+
+<h1>Background / Scenario</h1>
+
+<p class=BodyTextL25>In this activity, you will explore the smart home example.
+Depending on the application, some data is best processed close to the source.
+The smart home example takes advantage of Edge computing to monitor and act
+upon the levels of smoke detected in the home.</p>
+
+<h1>Instructions</h1>
+
+<h2 style='margin-left:0in;text-indent:0in'>Part 1: Explore the Smart Home</h2>
+
+<h3 style='margin-left:0in;text-indent:0in'>Step 1: Understanding the devices
+that comprise the smart home.</h3>
+
+<p class=BodyTextL25>Commonly ISPs deliver data and video over a single coaxial
+cable. Starting from the attic, a coaxial splitter is used to separate the
+video signal from the data signal.</p>
+
+<p class=SubStepAlpha>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Two coaxial cables leave the coaxial splitter in the topology shown.</p>
+
+<h4>Question:</h4>
+
+<p class=BodyTextL50 style='margin-top:0in'>Which devices does the coaxial
+cable connect to?</p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL50Answer><span class=AnswerGray><span style='
+	border:none'><span style='border:none'>TV and Cable Modem.</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL50Answer><span class=AnswerGray><span style='
+border:none'><span style='border:none'>TV and Cable Modem.</span></span></span></p> -->
+
+<p class=SubStepAlpha>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>The cable modem is the interface between the network of the ISP and the
+home.</p>
+
+<h4>Question:</h4>
+
+<p class=BodyTextL50 style='margin-top:0in'>To which devices does the cable
+modem connect?</p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL50Answer><span class=AnswerGray><span style='
+	border:none'><span style='border:none'>Coaxial splitter and Home Gateway.</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL50Answer><span class=AnswerGray><span style='
+border:none'><span style='border:none'>Coaxial splitter and Home Gateway.</span></span></span></p> -->
+
+<p class=BodyTextL50>The Home Gateway acts as a concentrator and router to all
+internal home devices. It also provides a web-based interface that allows users
+to monitor and control various smart home devices. Notice that the home devices
+can connect to the Home Gateway through either a wireless and/or wired
+connection.</p>
+
+<p class=BodyTextL50><b>Note</b>: Packet Tracer uses dashed beams to represent
+wireless connections. However, this can make a topology difficult to understand
+if too many devices are connected. Because of this, wireless connections have
+been hidden. To show wireless connections, go to <b>Options</b> &gt; <b>Preferences</b>
+&gt; <b>Hide</b> Tab &gt; uncheck <b>Hide Wireless/Cellular Connection</b>.</p>
+
+<h4>Question:</h4>
+
+<p class=BodyTextL50 style='margin-top:0in'>List all home devices connected to
+the Home Gateway.</p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL50Answer><span class=AnswerGray><span style='
+	border:none'><span style='border:none'>Cable Modem0, smart solar panel, smart window, smart lamp, smart phone,
+tablet, smoke detector, temperature meter, TV, smart alarm, smart coffee maker,
+smart door, heating unit, cooling unit, smart water mete<span style='border:
+none'>r, smart sprinkler, MCU, smart garage door, smoke sensor, and smoke
+detector.</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL50Answer><span class=AnswerGray><span style='
+border:none'><span style='border:none'>C</span></span></span><span
+class=AnswerGray><span style='border:none'><span style='border:
+none'>able modem0, smart solar panel, smart window, smart lamp, smart phone,
+tablet, smoke detector, temperature meter, TV, smart alarm, smart coffee maker,
+smart door, heating unit, cooling unit, smart water mete<span style='border:
+none'>r, smart sprinkler, MCU, smart garage door, smoke sensor, and smoke
+detector.</span></span></span></span></p> -->
+
+<h3 style='margin-left:0in;text-indent:0in'>Step 2: Interacting with the Smart
+Home.</h3>
+
+<p class=BodyTextL25>The devices in the smart home can be monitored and
+controlled remotely through any computer in the home. Because all smart devices
+connect to the Home Gateway which hosts a web-based interface, tablets,
+smartphones, laptops or desktop computers can be used to interact with the
+smart devices.</p>
+
+<p class=SubStepAlpha>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Click the <b>Tablet</b>. (The tablet is located on the bed in the master
+bedroom).</p>
+
+<p class=SubStepAlpha>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Navigate to <b>Desktop</b> &gt; <b>IoT Monitor</b>.</p>
+
+<p class=SubStepAlpha>c.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>The IP address of IoT server on the Home Gateway is 192.168.25.1 Use <b>admin</b>/<b>admin</b>
+as username and password to log into the Home Gateway. Click <b>Login</b>.</p>
+
+<h4>Question:</h4>
+
+<p class=BodyTextL50 style='margin-top:0in'>What is displayed?</p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL50Answer><span class=AnswerGray><span style='
+	border:none'><span style='border:none'>A list of all the smart devices
+currently <span style='border:none'>connected to the Home Gateway. Some devices
+can be controlled while others can be only monitored.</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL50Answer><span class=AnswerGray><span style='
+border:none'><span style='border:none'>A list of all the smart devices
+currently <span style='border:none'>connected to the Home Gateway. Some devices
+can be controlled while others can be only monitored.</span></span></span></span></p> -->
+
+<p class=SubStepAlpha>d.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>The smart door is currently unlocked (represented by a green light on
+its door knob), but it can be locked remotely. Click the smart door in the
+browser to expand the option.</p>
+
+<p class=SubStepAlpha>e.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Click <b>Lock</b> to lock the door.</p>
+
+<h4>Question:</h4>
+
+<p class=BodyTextL50 style='margin-top:0in'>Was the door locked? How do you
+know?</p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL50Answer><span class=AnswerGray><span style='
+	border:none'><span style='border:none'>Yes. The door knob light turned red
+which is Packet Tracer’s way to represent a locked smart door. Also, the Smart
+Door section <span style='border:none'>within the web browser highlights the
+Lock button.</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL50Answer><span class=AnswerGray><span style='
+border:none'><span style='border:none'>Yes. The door knob light turned red
+which is Packet Tracer’s way to represent a locked smart door. Also, the Smart
+Door section <span style='border:none'>within the web browser highlights the
+Lock button.</span></span></span></span></p> -->
+
+<p class=SubStepAlpha>f.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Click <b>Unlock</b> to unlock the door.</p>
+
+<p class=SubStepAlpha>g.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Click the smoke detector in the browser to expand the section.</p>
+
+<h4>Questions:</h4>
+
+<p class=BodyTextL50 style='margin-top:0in'>What is the smoke level reading
+provided by the smoke detector?</p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL50Answer><span class=AnswerGray><span style='
+	border:none'><span style='border:none'>Zero. No s<span style='border:none'>moke
+is currently being detected by the detector.</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL50Answer><span class=AnswerGray><span style='
+border:none'><span style='border:none'>Zero. No s<span style='border:none'>moke
+is currently being detected by the detector.</span></span></span></span></p> -->
+
+<p class=BodyTextL50>Can the smoke detector be controlled?</p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL50Answer><span class=AnswerGray><span style='
+	border:none'><span style='border:none'>No. The smoke detector can only be
+monitored.</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL50Answer><span class=AnswerGray><span style='
+border:none'><span style='border:none'>No. The smoke detector can only be
+monitored.</span></span></span></p> -->
+
+<p class=SubStepAlpha>h.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Smart devices can also be controlled directly, representing physical
+interaction.</p>
+
+<p class=BodyTextL50>Within the Logical work area of Packet Tracer, hold down
+the ALT key and click the <b>Smart Coffee Maker</b> to turn it on or off.</p>
+
+<h2 style='margin-left:0in;text-indent:0in'>Part 2: Edge Computing in the Smart
+Home</h2>
+
+<p class=BodyTextL25>The MCU added to the smart home is used to monitor the
+smoke levels read by the smoke sensor and decide if the house should be
+ventilated. If the carbon monoxide (CO) levels raises above 10.3 units, the MCU
+is programmed to automatically open the window, front door, garage door and
+start the fan in high speed. This action is only reverted (close doors and
+windows and stop the fan) when the CO levels drop below 1 unit.</p>
+
+<h3 style='margin-left:0in;text-indent:0in'>Step 1: Run the Classic Car.</h3>
+
+<p class=BodyTextL25>The owner keeps a classic car in the garage and needs to
+be run occasionally. The classic car generates carbon monoxide which raises the
+levels within the premises.</p>
+
+<p class=SubStepAlpha>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Click the <b>Tablet</b> located on the bed in the master bedroom.</p>
+
+<p class=SubStepAlpha>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Navigate to <b>Desktop</b> &gt; <b>Web Browser</b>.</p>
+
+<p class=SubStepAlpha>c.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>In the address bar, enter <b>192.168.25.1</b>. This is the IP address of
+the Home Gateway.</p>
+
+<p class=SubStepAlpha>d.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Use <b>admin </b>/<b>admin</b> as username and password to log into the
+Home Gateway.</p>
+
+<p class=SubStepAlpha>e.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Click the <b>Smoke Detector</b> within the smart home; leave this window
+visible so you can monitor the smoke levels.</p>
+
+<p class=SubStepAlpha>f.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Start the car engine by holding the <b>Al</b>t key and clicking the
+classic car.</p>
+
+<p class=BodyTextL50 style='page-break-after:avoid'>What happens to the air
+inside the house with the car running inside the garage?</p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL50Answer><span class=AnswerGray><span style='
+	border:none'><span style='border:none'>Because the doors and window are shut,
+the smoke sensor detects elevated levels of dangerous gasses. When the levels
+raise above 10.3 units, the MCU acts up<span style='border:none'>on it and open
+the garage door, front door, and window. The MCU also start the ceiling fan in
+its highest speed.</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL50Answer><span class=AnswerGray><span style='
+border:none'><span style='border:none'>Because the doors and window are shut,
+the smoke sensor detects elevated levels of dangerous gasses. When the levels
+raise above 10.3 units, the MCU acts up<span style='border:none'>on it and open
+the garage door, front door, and window. The MCU also start the ceiling fan in
+its highest speed.</span></span></span></span></p> -->
+
+<p class=BodyTextL50>What happens to air inside the house after the MCU opens
+the doors and window, and start the fan?</p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL50Answer><span class=AnswerGray><span style='
+	border:none'><span style='border:none'>The smoke level drop <span
+style='border:none'>to close to zero but it doesn’t reach zero.</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL50Answer><span class=AnswerGray><span style='
+border:none'><span style='border:none'>The smoke level drop <span
+style='border:none'>to close to zero but it doesn’t reach zero.</span></span></span></span></p> -->
+
+<p class=BodyTextL50>Does the MCU close the doors and window, and stop the fan?</p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL50Answer><span class=AnswerGray><span style='
+	border:none'><span style='border:none'>No. The car is still running and the
+smoke levels are still measurable.</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL50Answer><span class=AnswerGray><span style='
+border:none'><span style='border:none'>No. The car is still running and the
+smoke levels are still measurable.</span></span></span></p> -->
+
+<p class=SubStepAlpha>g.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>While still monitoring the levels, stop the engine of the classic car by
+holding the <b>Alt</b> key and clicking the classic car.</p>
+
+<h4>Questions:</h4>
+
+<p class=BodyTextL50 style='margin-top:0in'>What happens to air quality inside
+the house after the engine is stopped?</p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL50Answer><span class=AnswerGray><span style='
+	border:none'><span style='border:none'>The CO and CO2 levels drop to 0 units.</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL50Answer><span class=AnswerGray><span style='
+border:none'><span style='border:none'>The CO and CO2 levels drop to 0 units.</span></span></span></p> -->
+
+<p class=BodyTextL50>What happens to the doors, window and fan?</p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL50Answer><span class=AnswerGray><span style='
+	border:none'><span style='border:none'>Now that the levels dropped to below 1
+unit, the MCU decides that is safe to shut the garage door, front door, and
+window. The MCU also stops the fan.</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL50Answer><span class=AnswerGray><span style='
+border:none'><span style='border:none'>Now that the levels dropped to below 1
+unit, the MCU decides that is safe to shut the garage door, front door, and
+window. The MCU also stops the fan.</span></span></span></p> -->
+
+<h1>Reflection</h1>
+
+<p class=BodyTextL25>This example shows that the decision between cloud and edge
+processing depends on the application.</p>
+
+<p class=BodyTextL25>In the smart home example, edge computing was the best
+option. The data generated by the smoke sensors were processed and used to make
+decisions regarding the air quality of the house. In this scenario, there was
+no need to send out sensor data to the cloud for processing. Cloud processing
+would slow down the response time, potentially putting lives in danger. Another
+possible problem relates to the internet link; if the connection to the
+internet was lost, the entire system would fail, putting lives at risk.</p>
+
+<p class=ConfigWindow>End of document</p>
+<div class="global-action-container btn__container">
+	<button class="show-all-answers btn-text btn__action">Show All Answers</button>
+	<button class="hide-all-answers btn-text btn__action hidden">Hide All Answers</button>
+	<button class="clear-all-responces btn-text btn__action">Clear My Responses</button>
+</div>
+
+<div id="footerDIV"><span><br><hr><span style="padding-right:5px;float:left;font-family:arial;font-size:12px;">© 2017 - 2022 Cisco and/or its affiliates. All rights reserved. Cisco Public</span><br></span></div>
+</div>
+
+<script>
+
+	window.addEventListener('load',function(){
+		console.log('loaded');
+		document.querySelectorAll(".AnswerGray").forEach(function(ele){
+			ele.classList.add("hidden");
+		})
+		document.querySelectorAll(".hide-answer").forEach(function(ele){
+			ele.classList.add("hidden");
+		})
+		document.querySelectorAll(".show-answer").forEach(function(ele){
+			ele.addEventListener("click",function(e){
+				e.currentTarget.nextElementSibling.classList.remove("hidden");
+				e.currentTarget.closest('.question-container').querySelectorAll(".AnswerGray").forEach(function(ele){
+					ele.classList.remove("hidden");
+				})
+				ele.classList.add("hidden");
+			})
+		})
+		document.querySelectorAll(".hide-answer").forEach(function(ele){	
+			ele.addEventListener("click",function(e){
+				e.currentTarget.previousElementSibling.classList.remove("hidden");
+				e.currentTarget.closest('.question-container').querySelectorAll(".AnswerGray").forEach(function(ele){
+					ele.classList.add("hidden");
+				})
+				ele.classList.add("hidden");
+			})
+		})
+		var event = new Event('click', {
+			bubbles: true,
+			cancelable: true,
+		});
+		document.querySelectorAll(".show-all-answers").forEach(function(ele){	
+			ele.addEventListener("click",function(e){
+				e.currentTarget.nextElementSibling.classList.remove("hidden");
+				 ele.classList.add('hidden');
+				document.querySelectorAll(".show-answer").forEach(function(ele){
+					ele.dispatchEvent(event);
+				})
+			})
+		})
+
+		document.querySelectorAll(".hide-all-answers").forEach(function(ele){	
+			ele.addEventListener("click",function(e){
+				e.currentTarget.previousElementSibling.classList.remove("hidden");
+				 ele.classList.add('hidden');
+				document.querySelectorAll(".hide-answer").forEach(function(ele){
+					ele.dispatchEvent(event);
+				})
+			})
+		})
+
+		document.querySelectorAll(".clear-all-responces").forEach(function(ele){	
+			ele.addEventListener("click",function(e){
+				document.querySelectorAll("textArea").forEach(function(ele){
+					ele.value = "";
+				})
+			})
+		})
+
+		
+		
+	})
+	</script>
+
+</body>
+
+</html>
