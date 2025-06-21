@@ -1,0 +1,769 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>Lab - Research Intent-Based Networking (IBN)</title>
+<style>
+ 
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Webdings;
+	panose-1:5 3 1 2 1 5 9 6 7 3;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Noto Sans Symbols";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	page-break-after:avoid;
+	font-size:3.0pt;
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:normal;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	font-size:8.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0in;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0in;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.AnswerLineL25, li.AnswerLineL25, div.AnswerLineL25
+	{mso-style-name:"Answer Line L25";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-weight:bold;
+	font-style:italic;}
+p.PageHead, li.PageHead, div.PageHead
+	{mso-style-name:"Page Head";
+	margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:115%;
+	border:none;
+	padding:0in;
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+p.Bulletlevel1, li.Bulletlevel1, div.Bulletlevel1
+	{mso-style-name:"Bullet level 1";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.5in;
+	text-indent:-.25in;
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;}
+p.ConfigWindow, li.ConfigWindow, div.ConfigWindow
+	{mso-style-name:"Config Window";
+	margin:0in;
+	font-size:3.0pt;
+	font-family:"Arial",sans-serif;
+	color:white;
+	font-style:italic;}
+p.SubStepAlpha, li.SubStepAlpha, div.SubStepAlpha
+	{mso-style-name:"SubStep Alpha";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.5in;
+	text-indent:-.25in;
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;}
+p.BodyTextL25, li.BodyTextL25, div.BodyTextL25
+	{mso-style-name:"Body Text L25";
+	mso-style-link:"Body Text L25 Char";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	/* margin-left:.25in; */
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;}
+p.SubStepNum, li.SubStepNum, div.SubStepNum
+	{mso-style-name:"SubStep Num";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;}
+p.BodyTextL25Bold, li.BodyTextL25Bold, div.BodyTextL25Bold
+	{mso-style-name:"Body Text L25 Bold";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.ReflectionQ, li.ReflectionQ, div.ReflectionQ
+	{mso-style-name:"Reflection Q";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	page-break-after:avoid;
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Times New Roman",serif;
+	color:white;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:SimSun;
+	font-weight:bold;}
+span.BodyTextL25Char
+	{mso-style-name:"Body Text L25 Char";
+	mso-style-link:"Body Text L25";}
+p.BodyTextL25Answer, li.BodyTextL25Answer, div.BodyTextL25Answer
+	{mso-style-name:"Body Text L25 Answer";
+	mso-style-link:"Body Text L25 Answer Char";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	/* margin-left:.25in; */
+	background:#D9D9D9;
+	font-size: 11.5pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.BodyTextL25AnswerChar
+	{mso-style-name:"Body Text L25 Answer Char";
+	mso-style-link:"Body Text L25 Answer";
+	background:#D9D9D9;
+	font-weight:bold;}
+span.AnswerGray
+	{mso-style-name:"Answer Gray";
+	font-family:"Arial",sans-serif;
+	border:none;
+	line-height: 1.25rem;
+	font-weight:bold;}
+.MsoChpDefault
+	{font-size: 11.5pt;
+	font-family:"Arial",sans-serif;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:76.3pt .75in .9in .75in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+
+	.AnswerGray{
+	padding: 0.2rem;
+}
+
+.question-action-container{
+	margin-top: 6pt;
+    margin-right: 0in;
+    margin-bottom: 6pt;
+    /* margin-left: 0.5in; */
+}
+
+.show-answer, .hide-answer {
+	padding: 0.5rem 1rem;
+	background-color: #00bceb;
+	color: #fff;
+	border: 0px;
+	cursor: pointer;
+	font-size: 11.5pt;
+}
+
+.global-action-container {
+	display: flex;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.global-action-container .btn__action {
+	margin: 10px;
+}
+.btn__container button.btn__action:not(.is-full-width) {
+	width: calc(50% - .5%);
+}
+.btn-text {
+	border: 0px;
+	padding: 0.5rem 1rem;
+	background-color: #6abf4b;
+	color: #fff;
+	border-radius: 0;
+	cursor: pointer;
+	font-size: 11.5pt;
+}
+
+.hidden{
+	display: none;
+}
+.dark-theme {
+        color: #fff;
+      }
+      .dark-theme .dark-color {
+        color: #fff !important;
+      }
+      .dark-theme p.ConfigWindow,
+      .dark-theme li.ConfigWindow,
+      .dark-theme div.ConfigWindow {
+        mso-style-name: "Config Window";
+        color: #212328;
+      }
+      .dark-theme h4 {
+        color: #212328;
+      }
+      .dark-theme .MsoTitle span {
+        color: #fff !important;
+      }
+      .dark-theme textarea {
+        background-color: #212328;
+        color: #fff;
+      }
+      .dark-theme .BodyTextL25Answer {
+        background-color: #000;
+        color: #fff;
+      }
+      .dark-theme .BodyTextL25Answer > span {
+        padding: 4px;
+      }
+      .dark-theme .BodyTextL25Answer span {
+        color: #fff;
+      }
+      .dark-theme table tbody tr td {
+        color: #fff !important;
+      }
+      .dark-theme table .TableHeading {
+        color: #000;
+      }
+	  p.BodyTextL50Answer,
+	li.BodyTextL50Answer,
+	div.BodyTextL50Answer {
+		mso-style-name: "Body Text L50 Answer";
+		mso-style-link: "Body Text L50 Answer Char";
+		margin-top: 6.0pt;
+		margin-right: 0in;
+		margin-bottom: 6.0pt;
+		background: #D9D9D9;
+		font-size: 10.0pt;
+		font-family: "Arial", sans-serif;
+		font-weight: bold;
+	}
+	.dark-theme .BodyTextL50Answer {
+        background-color: #000;
+        color: #fff;
+    }
+</style>
+
+</head>
+
+
+<body lang=EN-US link=blue vlink=purple style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoTitle>Lab - Research Intent-Based Networking (IBN)</p>
+
+<h1><a name="_gjdgxs"></a>Objectives</h1>
+
+<p class=BodyTextL25Bold>Part 1: Explore the Cisco Intent-Based Networking
+(IBN) Website</p>
+
+<p class=BodyTextL25Bold>Part 2: Introduction to Intent-Based Networking (IBN)
+with Cisco DevNet</p>
+
+<p class=BodyTextL25Bold>Part 3: Explore IBN Community Requests and Share Your
+Own</p>
+
+<h1>Background / Scenario</h1>
+
+<p class=BodyTextL25>Today the network connects everything. What if the network
+could constantly adapt, protect, and notify based on the intent of the business
+owner? With an intent-based network (IBN), based on an open platform, the
+network can capture business intent and align the end-to-end network with that
+intent to bridge the gap between what the business needs and what the network
+delivers.</p>
+
+<h1>Required Resources</h1>
+
+<p class=Bulletlevel1><span style='font-size:7.0pt;font-family:Webdings'>=<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></span>Device with internet
+access</p>
+
+<h1>Instructions</h1>
+
+<h2 style='margin-left:0in;text-indent:0in'>Part 1: Explore the Cisco
+Intent-Based Network (IBN) Website</h2>
+
+<p class=BodyTextL25>In this part, you will be introduced to an overview and
+multiple use cases of intent-based networking (IBN) with Cisco. While reading
+through this site and watching the embedded videos you will learn about human
+intent being transformed into machine policy implementation. Access the link
+below to access the Cisco IBN solution website.</p>
+
+<p class=BodyTextL25><a
+href="https://www.cisco.com/c/en/us/solutions/intent-based-networking.html?dtid=osscdc000283" target="_blank">https://www.cisco.com/c/en/us/solutions/intent-based-networking.html?dtid=osscdc000283</a></p>
+
+<p class=BodyTextL25>Read through the Cisco Solutions website above and answer
+the following questions:</p>
+
+<h4>Questions:</h4>
+
+<p class=BodyTextL25 style='margin-top:0in'>What is Intent-Based Networking
+(IBN)?</p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL50Answer><span class=AnswerGray><span style='
+	border:none'><span style='border:none'>An Intent-Based Networking bridges the
+gap between business and IT. It captures business intent and continuously
+aligns the end-to-end network with that intent. Intent can apply to applicatio<span
+style='border:none'>n service levels, security policies, compliance,
+operational processes, and other business needs.</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL50Answer><span class=AnswerGray><span style='
+border:none'><span style='border:none'>An Intent-Based Networking bridges the
+gap between business and IT. It captures business intent and continuously
+aligns the end-to-end network with that intent. Intent can apply to applicatio<span
+style='border:none'>n service levels, security policies, compliance,
+operational processes, and other business needs.</span></span></span></span></p> -->
+
+<p class=BodyTextL25>List at least two reasons for using IBN.</p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL25Answer><span class=AnswerGray><span style='color:black;
+	border:none'><span style='border:none'>Answers will vary but may
+include:<br>
+• Speed and agility. The network can rapidly respond to an organization’s needs
+with little manual intervention.<br>
+• Business value. The reduced time and effort required to maintain the network
+translates into more time for IT innovations that provide real value to the
+business.<br>
+• Reduced risk. Improved network visibility, analytics and automation result in
+faster threat detection and containment, continuous compliance, and reduced
+downtime.</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL25Answer><span style='color:black'>Answers will vary but may
+include:<br>
+• Speed and agility. The network can rapidly respond to an organization’s needs
+with little manual intervention.<br>
+• Business value. The reduced time and effort required to maintain the network
+translates into more time for IT innovations that provide real value to the
+business.<br>
+• Reduced risk. Improved network visibility, analytics and automation result in
+faster threat detection and containment, continuous compliance, and reduced
+downtime.</span></p> -->
+
+<h2 style='margin-left:0in;text-indent:0in'>Part 2: Introduction to
+Intent-Based Networking with Cisco DevNet</h2>
+
+<p class=BodyTextL25>In this part, you will be introduced to IBN with Cisco
+DevNet. While reading through this blog, you’ll learn about networks being
+programmable and how IBN can be integrated via code. Click the link below to
+access the Cisco blog.</p>
+
+<p class=BodyTextL25><a
+href="https://blogs.cisco.com/enterprise/building-intent-based-network-with-devnet?ccid=cc000006&amp;dtid=esoxsp000263&amp;oid=psten009481" target="_blank">https://blogs.cisco.com/enterprise/building-Intent-Based-network-with-devnet?ccid=cc000006&amp;dtid=esoxsp000263&amp;oid=psten009481</a></p>
+
+<p class=BodyTextL25><a name="_Hlk517182328">Read through the blog using the
+link above and answer the following questions:</a></p>
+
+<h4>Questions:</h4>
+
+<p class=BodyTextL25 style='margin-top:0in'>What is the first step to get
+started and hands-on with coding?</p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL25Answer><span class=AnswerGray><span style='color:black;
+	border:none'><span style='border:none'>Answers may vary but will
+include:<br>
+• take a coding 101 class<br>
+• review the DevNet DNA Developer Center<br>
+• Code an intent and share it with the DevNet community</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL25Answer><span style='color:black'>Answers may vary but will
+include:<br>
+• take a coding 101 class<br>
+• review the DevNet DNA Developer Center<br>
+• Code an intent and share it with the DevNet community</span></p> -->
+
+<p class=BodyTextL25>With IBN in use, what should happen if a business owner
+specifies an intent to the network?</p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL50Answer><span class=AnswerGray><span style='
+	border:none'><span style='border:none'>Answers will vary but may include: The intent will be translated into
+network action and the action is activated in the network. Assurance will then continuously monitor, learn, and optimize the
+network performance according to the original intent.</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL50Answer><span class=AnswerGray><span style='
+border:none'><span style='border:none'>Answers will vary but may include:</span></span></span><span
+class=AnswerGray><span style='color:black;border:none'><span style='border:
+none'> </span></span></span><span class=AnswerGray><span style='color:black;
+border:none'><span style='border:none'>The intent will be translated into
+network action and the action is activated in the network. Assurance <span
+style='border:none'>will then continuously monitor, learn, and optimize the
+network performance according to the original intent.</span></span></span></span></p> -->
+
+<h2 style='margin-left:0in;text-indent:0in'>Part 3: Explore IBN Community
+Requests and Share Your Own</h2>
+
+<p class=BodyTextL25>In this part, you will view other community members
+requests for IBN code, and you will share your idea for a business intent with
+the community. Developers in the community can turn your idea into code. Click
+the link below to access the Cisco DevNet Community for IBN and create a new
+account:</p>
+
+<p class=BodyTextL25><a href="https://developer.cisco.com/codeintent/" target="_blank">https://developer.cisco.com/codeintent/</a></p>
+
+<p class=BodyTextL25>Read through some of the intents developed by the
+community.</p>
+
+<h4>Questions:</h4>
+
+<p class=BodyTextL25 style='margin-top:0in'>After reading through some of the
+intents built by community members, pick two intents that interest you and list
+them below.</p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL50Answer><span class=AnswerGray><span style='
+	border:none'><span style='border:none'>Answers will vary</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL50Answer><span class=AnswerGray><span style='
+border:none'><span style='border:none'>Answers will vary</span></span></span><span
+class=AnswerGray><span style='color:black;border:none'><span style='border:
+none'>.</span></span></span></p> -->
+
+<p class=BodyTextL25>Create your own Intent Wish on the Cisco DevNet website
+and post it below:</p>
+
+<p class=BodyTextL25Bold>Title: </p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL50Answer><span class=AnswerGray><span style='
+	border:none'><span style='border:none'>Answer will vary. For example, I am a student who is learning to code.</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL50Answer><span class=AnswerGray><span style='
+border:none'><span style='border:none'>Answer will vary. </span></span></span><span
+class=AnswerGray><span style='color:black;border:none'><span style='border:
+none'>For example, I am a student who is learning to code.</span></span></span></p> -->
+
+<p class=BodyTextL25Bold>Event Details:</p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL50Answer><span class=AnswerGray><span style='
+	border:none'><span style='border:none'>I want to program on a Raspberry Pi to
+control IoT devices.</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL50Answer><span class=AnswerGray><span style='
+border:none'><span style='border:none'>I want to program on a Raspberry Pi to
+control IoT devices.</span></span></span></p> -->
+
+<h1>Reflection</h1>
+
+<p class=ReflectionQ style='page-break-after:auto'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Can you think of other use cases for IBN other than what you’ve found in
+the three websites?</p>
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL50Answer><span class=AnswerGray><span style='
+	border:none'><span style='border:none'>Answers will vary.</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL50Answer><span class=AnswerGray><span style='
+border:none'><span style='border:none'>Answers will vary.</span></span></span></p>-->
+
+<p class=ReflectionQ style='page-break-after:auto'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>What type of programming skills do you think you’ll need to deploy intent-based
+networks?</p> 
+
+<div class="question-container">
+	<div class=AnswerLineL50>
+		<fieldset style="width:50%;font-size:10px;font-style:normal;color:gray;"><legend>Answer Area</legend><textarea rows="3" name="answerArea" placeholder="Type your answer here." style="border:none;width:100%;"></textarea></fieldset>
+	</div>
+	
+	<p class=BodyTextL50Answer><span class=AnswerGray><span style='
+	border:none'><span style='border:none'>Answers will vary.</span></span></span></p>
+	
+	<div class="question-action-container">
+		<button class="MetroBtn show-answer">Show Answer</button>
+		<button class="MetroBtn hide-answer">Hide Answer</button>
+	</div>
+	</div>
+
+<!-- <p class=BodyTextL50Answer><span class=AnswerGray><span style='
+border:none'><span style='border:none'>Answers will vary.</span></span></span></p> -->
+
+<p class=ConfigWindow>End of document</p>
+
+
+<div class="global-action-container btn__container">
+	<button class="show-all-answers btn-text btn__action">Show All Answers</button>
+	<button class="hide-all-answers btn-text btn__action hidden">Hide All Answers</button>
+	<button class="clear-all-responces btn-text btn__action">Clear My Responses</button>
+</div>
+
+<div id="footerDIV"><span><br><hr><span style="padding-right:5px;float:left;font-family:arial;font-size:12px;">© 2017 - 2022 Cisco and/or its affiliates. All rights reserved. Cisco Public</span><br></span></div>
+</div>
+
+<script>
+
+	window.addEventListener('load',function(){
+		console.log('loaded');
+		document.querySelectorAll(".AnswerGray").forEach(function(ele){
+			ele.classList.add("hidden");
+		})
+		document.querySelectorAll(".hide-answer").forEach(function(ele){
+			ele.classList.add("hidden");
+		})
+		document.querySelectorAll(".show-answer").forEach(function(ele){
+			ele.addEventListener("click",function(e){
+				e.currentTarget.nextElementSibling.classList.remove("hidden");
+				e.currentTarget.closest('.question-container').querySelectorAll(".AnswerGray").forEach(function(ele){
+					ele.classList.remove("hidden");
+				})
+				ele.classList.add("hidden");
+			})
+		})
+		document.querySelectorAll(".hide-answer").forEach(function(ele){	
+			ele.addEventListener("click",function(e){
+				e.currentTarget.previousElementSibling.classList.remove("hidden");
+				e.currentTarget.closest('.question-container').querySelectorAll(".AnswerGray").forEach(function(ele){
+					ele.classList.add("hidden");
+				})
+				ele.classList.add("hidden");
+			})
+		})
+		var event = new Event('click', {
+			bubbles: true,
+			cancelable: true,
+		});
+		document.querySelectorAll(".show-all-answers").forEach(function(ele){	
+			ele.addEventListener("click",function(e){
+				e.currentTarget.nextElementSibling.classList.remove("hidden");
+				 ele.classList.add('hidden');
+				document.querySelectorAll(".show-answer").forEach(function(ele){
+					ele.dispatchEvent(event);
+				})
+			})
+		})
+
+		document.querySelectorAll(".hide-all-answers").forEach(function(ele){	
+			ele.addEventListener("click",function(e){
+				e.currentTarget.previousElementSibling.classList.remove("hidden");
+				 ele.classList.add('hidden');
+				document.querySelectorAll(".hide-answer").forEach(function(ele){
+					ele.dispatchEvent(event);
+				})
+			})
+		})
+
+		document.querySelectorAll(".clear-all-responces").forEach(function(ele){	
+			ele.addEventListener("click",function(e){
+				document.querySelectorAll("textArea").forEach(function(ele){
+					ele.value = "";
+				})
+			})
+		})
+
+		
+		
+	})
+	</script>
+</body>
+
+</html>
